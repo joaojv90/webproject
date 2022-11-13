@@ -81,7 +81,7 @@ img {
 .navbar-default {
     background: #202020;
     border: none;
-    border-left: 6px solid #d54ab6;
+    border-left: 6px solid #1FB301;
     padding-right: 40px;
     margin: 0 !important;
     position: relative;
@@ -110,7 +110,7 @@ img {
   	background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  	background: #d54ab6;
+  	background: #1FB301;
   	border-radius: 0px;
    	border: none;
    	margin-top: 20px;
@@ -395,7 +395,7 @@ footer a:hover {
   
 }
 .social-icons li a:hover {
-  background: #d54ab6;
+  background: #1FB301;
   color: #fff;
 }
 
