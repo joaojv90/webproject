@@ -131,7 +131,7 @@ img {
 
 /* home section */
 #home {
-  background: url('../images/home-bg.jpg') no-repeat;
+  background: url('../img/recursosprogramadores.png') no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 500px;
@@ -183,7 +183,7 @@ img {
 
 /* about section */
 #about-header {
-  background: url('../images/about-header.jpg') no-repeat;
+  background: url('../img/recursosprogramadores04.jpg') no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 500px;
@@ -225,7 +225,7 @@ img {
   padding: 20px;
 }
 #team h4 {
-  color: #d54ab6;
+  color: #1FB301;
 }
 #team img {
   opacity: 0.8;
@@ -247,7 +247,7 @@ img {
 
 /* portfolio section */
 #portfolio-header {
-  background: url('../images/portfolio-header.jpg') no-repeat;
+  background: url('../img/portfolio-header.jpg') no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 500px;
@@ -280,7 +280,7 @@ img {
 
 /* contact section */
 #contact-header {
-  background: url('../images/contact-header.jpg') no-repeat;
+  background: url('../img/contacts-header.jpg') no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 500px;
