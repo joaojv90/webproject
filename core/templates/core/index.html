@@ -58,7 +58,7 @@
 				<h2>Startup Business</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet.</p>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
-				<a href="{% url 'about' %}" class="btn btn-default">LEARN MORE</a>
+				<a href="{% url 'about' %}" class="btn btn-default">Ver más</a>
 			</div>
 		</div>
 	</div>
@@ -97,11 +97,19 @@
 			<div class="col-md-3 col-sm-6 col-xs-12">
 				<a href="{% static 'core/img/portfolio-img7.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img src="{% static 'core/img/portfolio-img7.jpg' %}" alt="portfolio img"></a>
 			</div>
-			<div class="col-md-12 col-sm-12">
-				<a rel="nofollow" href="https://www.instagram.com/cybertools.tech/" class="btn btn-default">Ver más</a>
+		</div>
+	</div>
+</div>
+
+<div id="link-portfolio">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12" style='text-align:center'>
+				<a href="{% url 'portfolio' %}" class="btn btn-default">Ver más</a>
 			</div>
 		</div>
 	</div>
-</div>	
-
+</div>
+<br>
+<br>
 {% endblock %}
