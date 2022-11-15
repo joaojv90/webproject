@@ -37,7 +37,7 @@
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="{% url 'index' %}" {% if request.path == '/' %}class="active"{% endif %}>Inicio</a></li>
-				<li><a href="{% url 'about' %}" {% if request.path == '/about/' %}class="active"{% endif %}>About</a></li>
+				<li><a href="{% url 'about' %}" {% if request.path == '/about/' %}class="active"{% endif %}>About us</a></li>
 				<li><a href="{% url 'portfolio' %}" {% if request.path == '/portfolio/' %}class="active"{% endif %}>Portafolio</a></li>
 				<li><a href="{% url 'contact' %}" {% if request.path == '/contact/' %}class="active"{% endif %}>Contactos</a></li>
 			</ul>
@@ -71,13 +71,13 @@
 			</div>
             
 			<div class="col-md-4 col-sm-4 newsletter">
-				<h3>Newsletter</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo.</p>
+				<h3>Suscribete</h3>
+				<p>Si deseas mantenerte al tanto de nuestras últimas noticias, ofertas laborales y muchó más, déjanos tus datos.</p>
 				<div class="input-group">
-           	        <form action="#" method="post">
+					<form action="#" method="post">
                         <input name="email" type="email" placeholder="Enter your email" class="form-control" autorequired>
-                    	<button type="submit" name="submit" class="btn email">Enviar</button>
-                  	</form>
+						<button type="submit" name="submit" class="btn email">Enviar</button>
+					</form>
 				</div>
 			</div>
             
@@ -90,7 +90,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-sm-6">
-				<p>Copyright © 2084 Company Name</p>
+				<p>Copyright © 2084 CyberTools</p>
 			</div>
 			<div class="col-md-6 col-sm-6">
 				<ul class="social-icons">
