@@ -6,7 +6,7 @@ var center;
 function initialize() {
     var mapOptions = {
       zoom: 16,
-      center: new google.maps.LatLng(13.758468, 100.567481),
+      center: new google.maps.LatLng(-0.335201, -78.529045),
       scrollwheel: false
     };
   
@@ -42,6 +42,6 @@ $('#portfolio a').nivoLightbox({
     });
 
 // HIDE MOBILE MENU AFTER CLIKING ON A LINK
-   $('.navbar-collapse a').click(function(){
+    $('.navbar-collapse a').click(function(){
         $(".navbar-collapse").collapse('hide');
     });
