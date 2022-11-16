@@ -5,24 +5,24 @@ var center;
 
 function initialize() {
     var mapOptions = {
-      zoom: 16,
-      center: new google.maps.LatLng(-0.335201, -78.529045),
-      scrollwheel: false
+        zoom: 16,
+        center: new google.maps.LatLng(-0.335201, -78.529045),
+        scrollwheel: false
     };
-  
+
     map = new google.maps.Map(document.getElementById('map-canvas'),  mapOptions);
 
     google.maps.event.addDomListener(map, 'idle', function() {
         calculateCenter();
     });
-  
+
     google.maps.event.addDomListener(window, 'resize', function() {
         map.setCenter(center);
     });
 }
 
 function calculateCenter() {
-  center = map.getCenter();
+    center = map.getCenter();
 }
 
 function loadGoogleMap(){
@@ -33,7 +33,7 @@ function loadGoogleMap(){
 }
 
 $(function(){
-  loadGoogleMap();
+    loadGoogleMap();
 });
 
 // NIVO LIGHTBOX
