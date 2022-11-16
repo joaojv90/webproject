@@ -24,11 +24,12 @@
 			</div>
         </div>
         <div class="row mt30">
-        
+        {% for portfolio in portfolios %}
 			<div class="col-md-4 col-sm-4 col-xs-6">
-				<a href="{% static 'core/img/portfolio-img1.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img src="{% static 'core/img/portfolio-img1.jpg' %}" alt="portfolio img"></a>
+				<a href="{{portfolio.image.url}}" data-lightbox-gallery="portfolio-gallery"><img src="{{portfolio.image.url}}" alt="portfolio img"></a>
 			</div>
-			<div class="col-md-4 col-sm-4 col-xs-6">
+		{% endfor %}
+		<!--	<div class="col-md-4 col-sm-4 col-xs-6">
 				<a href="{% static 'core/img/portfolio-img2.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img src="{% static 'core/img/portfolio-img2.jpg' %}" alt="portfolio img"></a>
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-6">
@@ -56,7 +57,7 @@
 			</div>
 			<div class="col-md-4 col-sm-4 col-xs-6">
 				<a href="{% static 'core/img/portfolio-img10.jpg' %}" data-lightbox-gallery="portfolio-gallery"><img src="{% static 'core/img/portfolio-img10.jpg' %}" alt="portfolio img"></a>
-			</div>
+			</div> -->
             
 		</div>
 	</div>
