@@ -78,11 +78,9 @@
 
         <div class="row mt30">
 			{% for portfolio in portfolios %}
-			{% if forloop.counter <= 6 %}
 			<div class="col-md-4 col-sm-4 col-xs-6">
 				<a href="{{portfolio.image.url}}" data-lightbox-gallery="portfolio-gallery"><img src="{{portfolio.image.url}}" alt="portfolio img"></a>
 			</div>
-			{% endif %}
 			{% endfor %}
 		</div>
 	</div>
