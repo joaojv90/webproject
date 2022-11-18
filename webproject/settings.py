@@ -145,3 +145,11 @@ CKEDITOR_CONFIGS = {
         ]
     }
 }
+
+# Gmail
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'cybertools.tech@gmail.com'
+EMAIL_HOST_PASSWORD = 'sgqrlydskgugrmre'
+EMAIL_USE_TLS = True
