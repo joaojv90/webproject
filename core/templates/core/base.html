@@ -56,7 +56,7 @@
 				<img src="{% static 'core/img/cybertools-logoPNG.png' %}" class="img-responsive" alt="logo" width="140px" height="75px">
                 <br>
 				<p>Puedes seguirnos en nuestras redes sociales de 
-                <a rel="nofollow" href="https://www.instagram.com/cybertools.tech/" target="_parent">Instagram</a></p>
+                <a rel="nofollow" href="{{LINK_INSTAGRAM}}" target="_parent">Instagram</a></p>
 				<p><i class="fa fa-phone"></i> +593-9-991-26808</p>
 				<p><i class="fa fa-envelope-o"></i> cybertools.tech@gmail.com</p>
                 <p><i class="fa fa-globe"></i> www.cybertools-tech.com</p>
@@ -89,11 +89,11 @@
 			</div>
 			<div class="col-md-6 col-sm-6">
 				<ul class="social-icons">
-					<li><a href="https://www.facebook.com/profile.php?id=100085386161547" class="fa fa-facebook"></a></li>
-					<li><a href="https://www.instagram.com/cybertools.tech/" class="fa fa-instagram"></a></li>
-					<li><a href="https://www.youtube.com/channel/UC75LZZ7xyQqzJ3nFH4eYycQ" class="fa fa-youtube"></a></li>
-					<li><a href="https://github.com/joaojv90" class="fa fa-github"></a></li>
-					<li><a href="https://wa.me/593999126808" class="fa fa-whatsapp"></a></li>
+					{% if LINK_FACEBOOK %} <li><a href="{{LINK_FACEBOOK}}" class="fa fa-facebook"></a></li> {% endif %}
+					{% if LINK_INSTAGRAM %} <li><a href="{{LINK_INSTAGRAM}}" class="fa fa-instagram"></a></li> {% endif %}
+					{% if LINK_YOUTUBE %} <li><a href="{{LINK_YOUTUBE}}" class="fa fa-youtube"></a></li> {% endif %}
+					{% if LINK_GITHUB %} <li><a href="{{LINK_GITHUB}}" class="fa fa-github"></a></li> {% endif %}
+					{% if LINK_WHATSAPP %} <li><a href="{{LINK_WHATSAPP}}" class="fa fa-whatsapp"></a></li> {% endif %}
 					<li><a href="mailto:cybertools.tech@gmail.com" class="fa fa-envelope-o"></a></li>
 				</ul>
 			</div>
