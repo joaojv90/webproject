@@ -146,10 +146,8 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-# Gmail
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'cybertools.tech@gmail.com'
-EMAIL_HOST_PASSWORD = 'sgqrlydskgugrmre'
-EMAIL_USE_TLS = True
+# Config de MailTrap
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '5906128dac835d'
+EMAIL_HOST_PASSWORD = '5b4bfe049318a3'
+EMAIL_PORT = '2525'

@@ -22,7 +22,12 @@
                 <p>Para ponerse en contacto directo con nosotros por favor su ayuda dejando los siguientes datos, pronto lo contactaremos</p>
 			</div>
 			<div class="col-md-8 col-sm-8 mt30">
+				{% if 'ok' in request.GET %}
+                    <div class="alert alert-success" role="alert">
+						Su mensaje fue enviado</div>
+                {% endif %}
 				<form action="{% url 'contact' %}" method="POST" role="form">
+					{% csrf_token %}
 					<div class="col-md-6 col-sm-6">
                         <label for="name">Nombre</label>
                         <input name="name" type="text" class="form-control" id="name">
@@ -36,15 +41,6 @@
                     <div class="col-md-6 col-sm-6">
 						<button type="submit" name="submit" class="btn btn-default">ENVIAR</button>
                     </div>
-
-					{% if message %}
-						{% for messages in message%}
-							<div class="alert alert-success" role="alert">
-								{{messages}}
-							</div>
-						{% endfor %}
-					{% endif %}
-
 				</form>
 			</div>
 			<div class="col-md-4 col-sm-4 address">

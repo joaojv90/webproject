@@ -1,9 +1,8 @@
 from django.shortcuts import render, redirect
 from portfolio.models import Portfolio
 from django.core.mail import EmailMessage
-from django.template.loader import render_to_string
-from django.conf import settings
-from django.contrib import messages
+from django.urls import reverse
+from .forms import ContactForm
 
 # Create your views here.
 def index(request):
@@ -11,27 +10,26 @@ def index(request):
     return render(request, 'core/index.html', {'portfolios': portfolio})
 
 def contact(request):
-    if request.method == "POST":
-        name = request.post['name']
-        email = request.post['email']
-        message = request.post['message']
-
-        template = render_to_string('email_template.html',{
-            'name':name,
-            'email':email,
-            'message': message})
+    contactForm = ContactForm()
+    if request.method == 'POST':
+        contactForm = ContactForm(data=request.POST)
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        message = request.POST.get('message', '')
 
         email = EmailMessage(
-            template,
-            settings.EMAIL_HOST_USER,
-            ['cybertools.tech@gmail.com']
+            "La Caffettiera : Nuevo mensaje de contacto",
+            "De {} <{}>\n\nEscribir:\n\n{}".format(name, email, message),
+            "no-contestar@inbox.mailtrap.io",
+            ["jojaramillo@itsqmet.edu.ec"],
+            reply_to=[email]
         )
 
-        email.fail_silently = False
-        email.send()
+        # Enviar mail
+        try:
+            email.send()
+            return redirect(reverse('contact') + '?ok')
+        except:
+            return redirect(reverse('contact') + '?fail')
 
-        messages.success(request,'Su mensaje a sido enviado.')
-
-        return redirect('core/contact.html')
-
-    return render(request, 'core/contact.html')
+    return render(request, 'core/contact.html', {'contactForm': contactForm})
