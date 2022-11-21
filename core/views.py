@@ -18,7 +18,7 @@ def contact(request):
         message = request.POST.get('message', '')
 
         email = EmailMessage(
-            "La Caffettiera : Nuevo mensaje de contacto",
+            "Cybertools : Nuevo mensaje de contacto",
             "De {} <{}>\n\nEscribir:\n\n{}".format(name, email, message),
             "no-contestar@inbox.mailtrap.io",
             ["jojaramillo@itsqmet.edu.ec"],
